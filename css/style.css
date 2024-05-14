@@ -514,3 +514,284 @@ header .arrow a, header .arrow a:visited, header .arrow a:focus {
   width: 100%;
 }
 
+.menu {
+  background-color: #F7F7F7;
+  border-radius: 40px 40px 0 0;
+  margin-top: -43px;
+}
+@media (min-width: 1023.99px) {
+  .menu {
+    width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.menu .restaurant-name {
+  display: flex;
+  position: relative;
+  margin: 30px 15px 0 15px;
+  justify-content: center;
+}
+.menu .restaurant-name .content {
+  align-items: baseline;
+  display: flex;
+}
+.menu .restaurant-name .content h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+.menu .restaurant-name .content .fa-heart {
+  position: relative;
+  font-size: 21px;
+  width: 25px;
+  padding-top: 8px;
+  text-align: center;
+  animation: heart-not-filled 0.2s linear 0s 1 forwards;
+}
+@keyframes heart-not-filled {
+  0% {
+    font-weight: bold;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  100% {
+    font-weight: normal;
+  }
+}
+.menu .restaurant-name .content .fa-heart:hover {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  animation: heart-filled 0.3s linear 0s 1 forwards;
+}
+@keyframes heart-filled {
+  0% {
+    font-weight: normal;
+  }
+  100% {
+    font-weight: bold;
+  }
+}
+.menu .menu-category {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  opacity: 0;
+}
+@media (min-width: 1023.99px) {
+  .menu .menu-category {
+    width: 634px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.menu .menu-category .menu-category-title {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  display: inline-block;
+  margin: 20px 0 5px 15px;
+}
+.menu .menu-category .menu-category-title::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  bottom: -5px;
+  background: #99E2D0;
+}
+.menu .menu-category .menu-item {
+  font-family: "Roboto";
+  background-color: white;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  margin: 15px 10px 0 10px;
+  padding-top: 15px;
+  height: 69px;
+  overflow: hidden;
+}
+.menu .menu-category .menu-item:hover .checkbox {
+  animation: show-checkbox 0.25s linear 0s 1 forwards;
+}
+@keyframes show-checkbox {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: calc(100% - 60px);
+  }
+}
+.menu .menu-category .menu-item:hover .dish > .title > .dish-title {
+  animation: reduce-dish-title 0.25s linear 0s 1 forwards;
+}
+@keyframes reduce-dish-title {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: calc(100% - 50px);
+  }
+}
+.menu .menu-category .menu-item:hover .dish > .second-line > .dish-subtitle {
+  animation: reduce-dish-subtitle 0.25s linear 0s 1 forwards;
+}
+@keyframes reduce-dish-subtitle {
+  0% {
+    width: calc(100% - 50px);
+  }
+  100% {
+    width: calc(100% - 100px);
+  }
+}
+.menu .menu-category .menu-item:hover .dish > .second-line > .dish-price, .menu .menu-category .menu-item:hover .dish > .title > .filler {
+  animation: move-price 0.25s linear 0s 1 forwards;
+}
+@keyframes move-price {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: -70px;
+  }
+}
+.menu .menu-category .menu-item .dish {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .menu-category .menu-item .dish .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  overflow: hidden;
+}
+.menu .menu-category .menu-item .dish .title .dish-title {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: -3px;
+  padding-right: 15px;
+  border-right: 20px;
+  animation: reduce-back-dish-title 0.25s ease-in 0s 1 forwards;
+}
+@keyframes reduce-back-dish-title {
+  0% {
+    width: calc(100% - 50px);
+  }
+  100% {
+    width: 100%;
+  }
+}
+.menu .menu-category .menu-item .dish .second-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  overflow: hidden;
+}
+.menu .menu-category .menu-item .dish .second-line .dish-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  padding-left: 15px;
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 50px);
+  animation: reduce-back-dish-subtitle 0.25s linear 0s 1 forwards;
+}
+@keyframes reduce-back-dish-subtitle {
+  0% {
+    width: calc(100% - 100px);
+  }
+  100% {
+    width: calc(100% - 50px);
+  }
+}
+.menu .menu-category .menu-item .dish .second-line .dish-price {
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+  left: -20px;
+  overflow: hidden;
+  animation: move-back-price 0.25s linear 0s 1 forwards;
+}
+@keyframes move-back-price {
+  0% {
+    left: -70px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+.menu .menu-category .menu-item .checkbox {
+  background-color: #99E2D0;
+  height: 69px;
+  width: 60px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 100%;
+  margin-top: -15px;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  animation: hide-checkbox 0.25s linear 0s 1 forwards;
+}
+@keyframes hide-checkbox {
+  0% {
+    left: calc(100% - 60px);
+  }
+  100% {
+    left: 100%;
+  }
+}
+.menu .menu-category .menu-item .checkbox .fa-check {
+  color: #99E2D0;
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  top: 23px;
+  height: fit-content;
+  width: 15px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.order-button {
+  background: #F7F7F7;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+}
+@media (min-width: 1023.99px) {
+  .order-button {
+    width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
