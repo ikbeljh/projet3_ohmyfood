@@ -768,18 +768,7 @@ header .arrow a, header .arrow a:visited, header .arrow a:focus {
     left: 100%;
   }
 }
-.menu .menu-category .menu-item .checkbox .fa-check {
-  color: #99E2D0;
-  position: relative;
-  background-color: white;
-  border-radius: 25px;
-  font-size: 15px;
-  top: 23px;
-  width: 15px;
-  padding: 4px;
-  overflow: hidden;
-  height: fit-content;
-}
+
 
 .order-button {
   background: #F7F7F7;
