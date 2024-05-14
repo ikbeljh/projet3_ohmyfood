@@ -807,3 +807,28 @@ header .arrow a, header .arrow a:visited, header .arrow a:focus {
   }
 }
 
+.dishes {
+  animation: show-menu-dishes 3s linear 0.75s 1 forwards;
+}
+@keyframes show-menu-dishes {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.desert {
+  animation: show-menu-desert 3s linear 1.5s 1 forwards;
+}
+@keyframes show-menu-desert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
